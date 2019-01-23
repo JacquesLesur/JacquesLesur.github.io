@@ -16,10 +16,12 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
+    
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
 
+
+    <link href="css/modal.css" rel="stylesheet">
     <link rel="icon" href="img/Perso Idle.gif" type="image/gif" >
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129699997-1"></script>
@@ -29,12 +31,35 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-129699997-1');
+      if (window.screen.width > 700 ) {
+        document.write('<script src="js/modal.js">');
+      }
+    </script>
     </script>
   </head>
 
   <body id="page-top">
 
+   
+
+
+
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+  
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+  
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+      </div>
+  
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Jacques Lesur</span>
         <span class="d-none d-lg-block">
@@ -77,7 +102,7 @@
           </h1>
           <div class="subheading mb-5">Nantes-France ·
           </div>
-          <img class="col-6 img-fluid" alt="Responsive image"src="img/Working.gif" id="gif"/>
+          <img id="myImg" class="col-6 img-fluid" alt="Work in progress"src="img/Working.gif" id="gif"/>
           <p class="lead mb-5">Je travaille actuellement sur le développement d'un jeu pour me présenter. En attendant, vous pouvez parcourir mon site avec attention afin d'en apprendre davantage à mon sujet.</p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/jacques-lesur-a3572b170/">
