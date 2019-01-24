@@ -19,22 +19,29 @@
     
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
-
+    <!-- Unity opengl -->
+    <script src="Build/UnityLoader.js"></script>
 
     <link href="css/modal.css" rel="stylesheet">
     <link rel="icon" href="img/Perso Idle.gif" type="image/gif" >
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129699997-1"></script>
+    
     <script>
+      
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'UA-129699997-1');
-      if (window.screen.width > 700 ) {
+      if (window.screen.width > 1000 ) {
         document.write('<script src="js/modal.js">');
+          var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Unity.json");
       }
+
+      
     </script>
+    
     </script>
   </head>
 
@@ -48,21 +55,20 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       
     <!-- The Modal -->
-    <div id="myModal" class="modal">
+<div id="myModal" class="modal">
 
-        <!-- The Close Button -->
-        <span class="close">&times;</span>
+    <!-- Modal content -->
+    <div class="modal-content"  style="background-color:white; margin-top:20%; " >
+        <img src="img/Working.gif" style="width: 80%; height: auto;"> 
+        <span>Work in progress</span>
+    </div>
   
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01">
-  
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
-      </div>
+  </div>
   
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Jacques Lesur</span>
         <span class="d-none d-lg-block">
+          
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="">
         </span>
       </a>
@@ -102,8 +108,15 @@
           </h1>
           <div class="subheading mb-5">Nantes-France ·
           </div>
-          <img id="myImg" class="col-6 img-fluid" alt="Work in progress"src="img/Working.gif" id="gif"/>
-          <p class="lead mb-5">Je travaille actuellement sur le développement d'un jeu pour me présenter. En attendant, vous pouvez parcourir mon site avec attention afin d'en apprendre davantage à mon sujet.</p>
+          
+          <!-- Image and overlay -->
+          <div class="container">
+            <img class=" offset-md-4 " id="myImg"src="img/Jacket.png" alt="Work in progress" >
+            <div class="offset-md-4 overlay" id="overlayClic">
+                <div class="text">Jouer</div>
+            </div>
+          </div>
+          <p class="lead lb-5">Je travaille actuellement sur le développement d'un jeu pour me présenter. En attendant, vous pouvez parcourir mon site avec attention afin d'en apprendre davantage à mon sujet.</p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/jacques-lesur-a3572b170/">
               <i class="fab fa-linkedin-in"></i>
